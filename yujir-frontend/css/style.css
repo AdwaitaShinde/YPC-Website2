@@ -1,0 +1,355 @@
+   html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+    }
+
+    main {
+      flex: 1;
+    }
+
+    /* ✅ Navbar */
+ .navbar {
+  background-color: #172953
+}
+
+.navbar-brand {
+  color: white !important;
+}
+
+.custom-link .nav-link {
+  color: white !important;
+  font-weight: 500;
+  margin: 0 12px;
+  text-decoration: none;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+/* Keep text color black even on hover, focus, and active */
+.nav-link:hover,
+.nav-link:focus,
+.nav-link:active,
+.nav-link.show,
+.nav-item.active .nav-link {
+  color: white !important;
+}
+
+/* Underline effect on hover */
+.custom-link .nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: white;
+  transition: width 0.3s ease;
+}
+
+.custom-link .nav-link:hover::after {
+  width: 100%;
+}
+
+.contact-btn {
+  background-color: #e66921;
+  color: white;
+  font-weight: bold;
+  transition: all 0.3s ease; /* Smooth animation */
+  transform: scale(1);
+}
+
+/* Hover effect */
+.contact-btn:hover {
+  background-color: #ee6516; /* Darker shade on hover */
+  transform: scale(1.1); /* Slightly bigger */
+  color: white;
+}
+
+/* Click (active) effect */
+.contact-btn:active {
+  background-color: #ee6516; /* Same shade on click */
+  /* transform: scale(1.05); Slight push on click */
+  color: white;
+}
+
+
+
+
+    /* ✅ Hero Section */
+    .hero-section {
+      background-color: #172953; /* Deep wine/purple */
+      color: white;
+      padding: 80px 20px;
+      height: 600px;
+    }
+
+    .hero-section h1 {
+      font-size: 2.5rem;
+      font-weight: bold;
+    }
+
+    .hero-section p {
+      font-size: 1.2rem;
+    }
+
+    .hero-section img {
+      width: 100%;
+      height: 500px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .about-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  border: 2px solid #e66921;
+  color: #e66921;
+  font-weight: bold;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-family: Arial, sans-serif;
+}
+
+.about-btn:hover {
+  background-color: #e66921;
+  color: white;
+}
+
+.about-btn:active {
+  background-color: #c44e1a; /* Darker red on click */
+  color: white;
+}
+
+.impact-section {
+  background-color: #172953;
+  color: white;
+}
+
+.mission-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  border: 2px solid #e66921;
+  color: #e66921;
+  font-weight: bold;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.mission-btn:hover {
+  background-color: #e66921;
+  color: white;
+}
+
+.mission-btn:active {
+  background-color: #c44e1a;
+  color: white;
+}
+
+
+    .service-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  border: 2px solid #172953;
+  color: #172953;
+  font-weight: bold;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-family: Arial, sans-serif;
+}
+
+.service-btn:hover {
+  background-color: #172953;;
+  color: white;
+}
+
+.service-btn:active {
+  background-color: #172953; /* Darker red on click */
+  color: white;
+}
+
+
+.about-section {
+  background-color: #202f51;
+  color: white; /* Optional: makes text readable on dark background */
+}
+
+    .learn-section {
+  background-color: #172953;
+}
+
+.learn-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  border: 2px solid #e66921;
+  color: #e66921;
+  font-weight: bold;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+}
+
+.learn-btn:hover {
+  background-color: #e66921;
+  color: white;
+}
+
+.learn-btn:active {
+  background-color: #c44e1a;
+  color: white;
+}
+
+.learn-image{
+  height: 300px;
+  width: 300px;
+}
+
+/* Full section background like About section */
+.services-section {
+  background-color: #202f51;
+}
+
+/* Individual service cards */
+.service-card {
+  background-color: #e55921;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+/* Optional hover effect */
+.service-card:hover {
+  transform: scale(1.03);
+}
+
+
+    .services-img{
+      height: 200px;
+      width: 200px;
+    }
+
+
+
+.join-section {
+  background-color: #e66921;
+}
+
+.join-btn {
+  display: inline-block;
+  padding: 12px 25px;
+  border: 2px solid #172953;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border-radius: 5px;
+}
+
+.join-btn:hover {
+  background-color: #172953;
+  color: white;
+}
+
+.join-btn:active {
+  background-color: #172953;
+  color: white;
+}
+
+.newsletter-section {
+  background-color: #172953;
+}
+
+.newsletter-form {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.email-input {
+  width: 60%;
+  min-width: 200px;
+  border: none;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+.subscribe-btn {
+  background-color: #e66921;
+  color: white;
+  font-weight: bold;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.subscribe-btn:hover {
+  background-color: #ee6516;
+}
+
+.subscribe-btn:active {
+  background-color: #c44e1a;
+}
+
+.contact-section {
+  background-color: #ee6516;
+  color: white;
+}
+
+.home-contact-btn {
+  background-color: transparent;
+  border: 2px solid #172953;
+  color:white;
+  font-weight: bold;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.home-contact-btn:hover {
+  background-color: #172953;
+  color: white;
+}
+
+.home-contact-btn:active {
+  background-color: #172953;
+  color: white;
+}
+
+
+    /* ✅ Footer */
+    .footer-section {
+  background-color: #212529;
+  color: white;
+}
+
+.footer-section a {
+  color: #e66921;
+  text-decoration: none;
+}
+
+.footer-section a:hover {
+  text-decoration: underline;
+}
+
+.footer-section i {
+  color: #e66921;
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+
+.footer-section i:hover {
+  color: #ffffff;
+}
+
+
+    @media (max-width: 768px) {
+      .hero-section {
+        text-align: center;
+      }
+    }
