@@ -16,7 +16,7 @@
 
     /* ✅ Navbar */
  .navbar {
-  background-color: #172953
+  background-color: #ee6516
 }
 
 .navbar-brand {
@@ -58,7 +58,7 @@
 }
 
 .contact-btn {
-  background-color: #e66921;
+  background-color: #172953;
   color: white;
   font-weight: bold;
   transition: all 0.3s ease; /* Smooth animation */
@@ -67,14 +67,14 @@
 
 /* Hover effect */
 .contact-btn:hover {
-  background-color: #ee6516; /* Darker shade on hover */
+  background-color: #1c2c53; /* Darker shade on hover */
   transform: scale(1.1); /* Slightly bigger */
   color: white;
 }
 
 /* Click (active) effect */
 .contact-btn:active {
-  background-color: #ee6516; /* Same shade on click */
+  background-color: #1c2c53; /* Same shade on click */
   /* transform: scale(1.05); Slight push on click */
   color: white;
 }
@@ -84,10 +84,11 @@
 
     /* ✅ Hero Section */
     .hero-section {
-      background-color: #172953; /* Deep wine/purple */
+      background-color: #ee6516; /* Deep wine/purple */
       color: white;
       padding: 80px 20px;
       height: 600px;
+      border-bottom: 2px solid #ee6516;
     }
 
     .hero-section h1 {
