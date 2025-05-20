@@ -1,4 +1,12 @@
-   html, body {
+/* body{
+  background-color: #172953;
+  background-color: #e3712e
+} */
+
+
+
+
+html, body {
       height: 100%;
       margin: 0;
       padding: 0;
@@ -16,7 +24,7 @@
 
     /* ✅ Navbar */
  .navbar {
-  background-color: #ee6516
+  background-color: #e3712e
 }
 
 .navbar-brand {
@@ -84,19 +92,86 @@
 
     /* ✅ Hero Section */
     .hero-section {
-      background-color: #ee6516; /* Deep wine/purple */
+      background-color: #e3712e; /* Deep wine/purple */
       color: white;
       padding: 80px 20px;
       height: 600px;
       border-bottom: 2px solid #ee6516;
     }
 
-    .hero-section h1 {
+
+
+
+
+    .about-page-intro-section{
+      background-color: #e3712e; 
+      color: white;
+    }
+
+.about-page-story-section{
+    background-color: #202f51;
+  color: white; /* Optional: makes text readable on dark background */
+}
+
+.Our-Story{
+  height: 350px;
+  width: 350px;
+}
+
+.about-page-mission-section{
+    background-color: #172953;
+  color: white;
+}
+
+.about-page-services-section{
+        background-color: #e3712e; 
+      color: white;
+}
+
+.about-page-services-section-img{
+border-radius: 50%; 
+border: 2px solid #172953; 
+height: 330px; 
+width: 330px;
+
+}
+
+.about-page-goals-section{
+    background-color: #202f51;
+  color: white; /* Optional: makes text readable on dark background */
+  
+}
+
+.goal-item {
+  font-size: 0.95rem;
+  min-width: 250px;
+  text-align: center;
+  height: 100px;
+  border: 3px solid #e3712e;
+}
+
+.about-page-Difference-section{
+    background-color: #172953;
+  color: white;
+}
+
+.circular-img {
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+
+
+
+
+    .main-heading {
       font-size: 2.5rem;
       font-weight: bold;
     }
 
-    .hero-section p {
+    .sub-heading {
       font-size: 1.2rem;
     }
 
@@ -110,8 +185,8 @@
     .about-btn {
   display: inline-block;
   padding: 10px 20px;
-  border: 2px solid #e66921;
-  color: #e66921;
+  border: 2px solid #e3712e;
+  color: #e3712e;
   font-weight: bold;
   text-decoration: none;
   transition: all 0.3s ease;
@@ -119,7 +194,7 @@
 }
 
 .about-btn:hover {
-  background-color: #e66921;
+  background-color: #e3712e;
   color: white;
 }
 
@@ -136,15 +211,15 @@
 .mission-btn {
   display: inline-block;
   padding: 10px 20px;
-  border: 2px solid #e66921;
-  color: #e66921;
+  border: 2px solid #e3712e;
+  color: #e3712e;
   font-weight: bold;
   text-decoration: none;
   transition: all 0.3s ease;
 }
 
 .mission-btn:hover {
-  background-color: #e66921;
+  background-color: #e3712e;
   color: white;
 }
 
@@ -192,8 +267,8 @@
 .learn-btn {
   display: inline-block;
   padding: 10px 20px;
-  border: 2px solid #e66921;
-  color: #e66921;
+  border: 2px solid #e3712e;
+  color: #e3712e;
   font-weight: bold;
   text-decoration: none;
   transition: all 0.3s ease;
@@ -201,7 +276,7 @@
 }
 
 .learn-btn:hover {
-  background-color: #e66921;
+  background-color: #e3712e;
   color: white;
 }
 
@@ -222,7 +297,7 @@
 
 /* Individual service cards */
 .service-card {
-  background-color: #e55921;
+  background-color: #e3712e;
   border-radius: 10px;
   transition: transform 0.3s ease;
 }
@@ -241,7 +316,8 @@
 
 
 .join-section {
-  background-color: #e66921;
+  background-color: #e3712e;
+  border: 2px solid #172953;
 }
 
 .join-btn {
@@ -282,26 +358,8 @@
   border-radius: 4px;
 }
 
-.subscribe-btn {
-  background-color: #e66921;
-  color: white;
-  font-weight: bold;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 4px;
-  transition: all 0.3s ease;
-}
-
-.subscribe-btn:hover {
-  background-color: #ee6516;
-}
-
-.subscribe-btn:active {
-  background-color: #c44e1a;
-}
-
-.contact-section {
-  background-color: #ee6516;
+.hero-contact-form {
+  background-color: #e3712e;
   color: white;
 }
 
@@ -334,7 +392,7 @@
 }
 
 .footer-section a {
-  color: #e66921;
+  color: #e3712e;
   text-decoration: none;
 }
 
@@ -343,7 +401,7 @@
 }
 
 .footer-section i {
-  color: #e66921;
+  color: #e3712e;
   font-size: 18px;
   transition: color 0.3s ease;
 }
