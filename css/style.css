@@ -378,19 +378,6 @@ html, body {
   color: white;
 }
 
-.about-page-services-section{
-        background-color: #e3712e; 
-      color: white;
-}
-
-.about-page-services-section-img{
-border-radius: 50%; 
-border: 2px solid #172953; 
-height: 330px; 
-width: 330px;
-
-}
-
 .about-page-goals-section{
     background-color: #e3712e;
   color: white; /* Optional: makes text readable on dark background */
@@ -420,6 +407,81 @@ width: 330px;
 .our-team-section{
   background-color: #172953;
   color: white; 
+}
+
+
+
+
+/* Service page */
+
+    .service-page-intro-section{
+      background-color: #e3712e; 
+      color: white;
+    }
+
+.services-page-overview-section {
+  background-color: #202f51; /* light gray or keep it transparent */
+  color: white;
+}
+
+.service-page-services-section{
+        background-color: #172953; 
+      color: white;
+}
+
+.service-page-services-section-img{
+border-radius: 50%; 
+border: 2px solid #e3712e; 
+height: 400px; 
+width: 400px;
+
+}
+
+
+.why-choose-us-section {
+  background-color: #202f51;
+  color: white;
+}
+
+.choose-card {
+  background-color: #172953;
+  border: 2px solid #e66921;
+  transition: transform 0.3s ease;
+}
+
+.choose-card:hover {
+  transform: scale(1.03);
+  border-color: #ee6516;
+}
+
+
+
+/* contact page */
+    .contact-page-intro-section{
+      background-color: #e3712e; 
+      color: white;
+    }
+
+.contact-form-page-section {
+  background-color: #172953;
+  color: white;
+}
+
+.contact-form-page-section input,
+.contact-form-section textarea {
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.contact-form-page-section .btn-primary {
+  background-color: #e66921;
+  border: none;
+  padding: 10px 25px;
+  font-weight: bold;
+}
+
+.contact-form-page-section .btn-primary:hover {
+  background-color: #c8561a;
 }
 
 
