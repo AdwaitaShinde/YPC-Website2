@@ -392,7 +392,7 @@ width: 330px;
 }
 
 .about-page-goals-section{
-    background-color: #202f51;
+    background-color: #e3712e;
   color: white; /* Optional: makes text readable on dark background */
   
 }
@@ -402,11 +402,11 @@ width: 330px;
   min-width: 250px;
   text-align: center;
   height: 100px;
-  border: 3px solid #e3712e;
+  border: 3px solid #202f51;
 }
 
 .about-page-Difference-section{
-    background-color: #172953;
+    background-color: #202f51;
   color: white;
 }
 
@@ -417,10 +417,10 @@ width: 330px;
   object-fit: cover;
 }
 
-
-
-
-
+.our-team-section{
+  background-color: #172953;
+  color: white; 
+}
 
 
 
