@@ -3,33 +3,57 @@
   background-color: #e3712e
 } */
 
+
+:root {
+  --primary-green: #295E3B;
+  --light-green: #CFE8DA;
+  --accent-yellow: #F1D302;
+  --accent-orange: #F78E69;
+  --text-dark: #3A3A3A;
+  --white: #FFFFFF;
+  --font-primary: 'Poppins', sans-serif;
+  --font-secondary: 'Open Sans', sans-serif;
+}
+
 html, body {
       height: 100%;
       margin: 0;
       padding: 0;
-      font-family: 'Segoe UI', sans-serif;
     }
 
 body {
       display: flex;
       flex-direction: column;
+      font-family: var(--font-primary);
     }
 
 main {
       flex: 1;
     }
 
+body p{
+  font-family: var(--font-secondary);
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+body h3{
+  font-size: 22px;
+}
+}
+
 /* Navbar */
 .navbar {
-  background-color: #e3712e
+  background-color: var(--light-green);
+  font-size: 18PX;
 }
 
 .navbar-brand {
-  color: white !important;
+  color: var(--primary-green) !important;
 }
 
 .custom-link .nav-link {
-  color: white !important;
+  color: var(--primary-green) !important;
   font-weight: 500;
   margin: 0 12px;
   text-decoration: none;
@@ -42,7 +66,7 @@ main {
 .nav-link:active,
 .nav-link.show,
 .nav-item.active .nav-link {
-  color: white !important;
+  color: var(--primary-green) !important;
 }
 
 .custom-link .nav-link::after {
@@ -52,7 +76,7 @@ main {
   left: 0;
   width: 0;
   height: 2px;
-  background-color: white;
+  background-color: var(--primary-green);
   transition: width 0.3s ease;
 }
 
@@ -62,32 +86,31 @@ main {
 
 /* contact button */
 .contact-btn {
-  background-color: #172953;
-  color: white;
+  background-color: var(--accent-yellow);
+  color: var(--text-dark);
   font-weight: bold;
   transition: all 0.3s ease; 
   transform: scale(1);
+  border-radius: 8px;
 }
 
 .contact-btn:hover {
-  background-color: #1c2c53; 
+  background-color: var(--accent-yellow); 
   transform: scale(1.1); 
-  color: white;
 }
 
 .contact-btn:active {
-  background-color: #1c2c53;
-  color: white;
+  background-color: var(--accent-yellow);
 }
 
 
 /* Hero Section */
 .hero-section {
-      background-color: #e3712e; 
+      background-color: var(--primary-green); 
       color: white;
       padding: 80px 20px;
       height: 600px;
-      border-bottom: 2px solid #ee6516;
+      border-bottom: 2px solid var(--accent-orange);
     }
 
 .main-heading {
@@ -107,117 +130,49 @@ main {
     }
 
 
-.about-btn {
+.read-more-btn {
   display: inline-block;
   padding: 10px 20px;
-  border: 2px solid #e3712e;
-  color: #e3712e;
+  border: 2px solid var(--accent-orange);
+  color: var(--accent-orange);
   font-weight: bold;
   text-decoration: none;
   transition: all 0.3s ease;
   font-family: Arial, sans-serif;
 }
 
-.about-btn:hover {
-  background-color: #e3712e;
+.read-more-btn:hover {
+  background-color: #fa8960;
   color: white;
 }
 
-.about-btn:active {
-  background-color: #c44e1a; 
+.read-more-btn:active {
+  background-color: #fa8960; 
   color: white;
+}
+
+    
+.about-section {
+  background-color: var(--light-green);
+  color: var(--text-dark);
+  border-bottom: 2px solid var(--accent-orange);
 }
 
 .impact-section {
-  background-color: #172953;
-  color: white;
-}
-
-.mission-btn {
-  display: inline-block;
-  padding: 10px 20px;
-  border: 2px solid #e3712e;
-  color: #e3712e;
-  font-weight: bold;
-  text-decoration: none;
-  transition: all 0.3s ease;
-}
-
-.mission-btn:hover {
-  background-color: #e3712e;
-  color: white;
-}
-
-.mission-btn:active {
-  background-color: #c44e1a;
-  color: white;
-}
-
-
-.service-btn {
-  display: inline-block;
-  padding: 10px 20px;
-  border: 2px solid #172953;
-  color: #172953;
-  font-weight: bold;
-  text-decoration: none;
-  transition: all 0.3s ease;
-  font-family: Arial, sans-serif;
-}
-
-.service-btn:hover {
-  background-color: #172953;;
-  color: white;
-}
-
-.service-btn:active {
-  background-color: #172953; 
-  color: white;
-}
-
-
-.about-section {
-  background-color: #202f51;
-  color: white; 
-}
-
-.learn-section {
-  background-color: #172953;
-}
-
-.learn-btn {
-  display: inline-block;
-  padding: 10px 20px;
-  border: 2px solid #e3712e;
-  color: #e3712e;
-  font-weight: bold;
-  text-decoration: none;
-  transition: all 0.3s ease;
-  margin-top: 10px;
-}
-
-.learn-btn:hover {
-  background-color: #e3712e;
-  color: white;
-}
-
-.learn-btn:active {
-  background-color: #c44e1a;
-  color: white;
-}
-
-.learn-image{
-  height: 300px;
-  width: 300px;
+  background-color: var(--light-green);
+  color: var(--text-dark);
+  border-bottom: 2px solid var(--accent-orange);
 }
 
 .services-section {
-  background-color: #202f51;
+  background-color: var(--light-green);
+  color: var(--text-dark);
+
 }
 
 
 .service-card {
-  background-color: #e3712e;
+  background-color: var(--primary-green);
   border-radius: 10px;
   transition: transform 0.3s ease;
 }
@@ -234,15 +189,27 @@ main {
 
 
 
+
+
+.learn-section {
+  background-color: var(--light-green);
+  color: var(--text-dark)
+}
+
+.learn-image{
+  height: 300px;
+  width: 300px;
+}
+
 .join-section {
-  background-color: #e3712e;
-  border: 2px solid #172953;
+  background-color: var(--primary-green);
+  border: 2px solid var(--accent-yellow);
 }
 
 .join-btn {
   display: inline-block;
   padding: 12px 25px;
-  border: 2px solid #172953;
+  border: 2px solid var(--accent-yellow);
   color: white;
   font-weight: bold;
   text-decoration: none;
@@ -251,12 +218,12 @@ main {
 }
 
 .join-btn:hover {
-  background-color: #172953;
-  color: white;
+  background-color: var(--accent-yellow);
+  color: var(--text-dark);
 }
 
 .join-btn:active {
-  background-color: #172953;
+  background-color: var(--accent-yellow);
   color: white;
 }
 
@@ -278,13 +245,13 @@ main {
 }
 
 .hero-contact-form {
-  background-color: #e3712e;
+  background-color: var(--primary-green);
   color: white;
 }
 
 .home-contact-btn {
   background-color: transparent;
-  border: 2px solid #172953;
+  border: 2px solid var(--accent-yellow);
   color:white;
   font-weight: bold;
   padding: 10px 20px;
@@ -294,12 +261,12 @@ main {
 }
 
 .home-contact-btn:hover {
-  background-color: #172953;
-  color: white;
+  background-color: var(--accent-yellow);
+  color: var(--text-dark);
 }
 
 .home-contact-btn:active {
-  background-color: #172953;
+  background-color: var(--accent-yellow);
   color: white;
 }
 
@@ -433,7 +400,7 @@ width: 400px;
 
 /* contact page */
 .contact-page-intro-section{
-      background-color: #e3712e; 
+      background-color: var(--primary-green); 
       color: white;
     }
 
