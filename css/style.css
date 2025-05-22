@@ -195,17 +195,17 @@ body h3{
       width: 200px;
     }
 
-.learn-section {
+.blog-section {
   background-color: var(--light-green);
   color: var(--text-dark)
 }
 
-.learn-image{
+.blog-image{
   height: 100px;
   width: 100px;
 }
 
-.learn-section-line{
+.blog-section-line{
   border-right: 2px solid black; 
   height: 150px;
 }
