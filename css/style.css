@@ -267,6 +267,18 @@ body h3{
   color: white;
 }
 
+.hero-contact-form input::placeholder,
+.hero-contact-form textarea::placeholder {
+  color: black !important;
+  opacity: 1;
+}
+
+.newsletter-section input::placeholder,
+.hero-contact-form textarea::placeholder {
+  color: black !important;
+  opacity: 1;
+}
+
 
 /* Footer */
 .footer-section {
