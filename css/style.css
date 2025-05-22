@@ -108,23 +108,30 @@ body h3{
 .hero-section {
       background-color: var(--primary-green); 
       color: white;
-      padding: 80px 20px;
-      height: 600px;
+      padding:50px;
+      height: 530px;
       border-bottom: 2px solid var(--accent-orange);
     }
 
 .main-heading {
-      font-size: 2.5rem;
+      font-size: 55px;
       font-weight: bold;
     }
 
+.main-heading-2{
+  font-size: 50px;
+  font-weight: bold;
+}
+
 .sub-heading {
-      font-size: 1.2rem;
+      font-size: 30px;
+      font-weight: bold;
+      
     }
 
 .hero-section img {
       width: 100%;
-      height: 500px;
+      height: 400px;
       border-radius: 8px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
@@ -167,6 +174,7 @@ body h3{
 .services-section {
   background-color: var(--light-green);
   color: var(--text-dark);
+  border-bottom: 2px solid var(--accent-orange);
 
 }
 
@@ -187,18 +195,24 @@ body h3{
       width: 200px;
     }
 
-
-
-
-
 .learn-section {
   background-color: var(--light-green);
   color: var(--text-dark)
 }
 
 .learn-image{
-  height: 300px;
-  width: 300px;
+  height: 100px;
+  width: 100px;
+}
+
+.learn-section-line{
+  border-right: 2px solid black; 
+  height: 150px;
+}
+
+.service-section-line{
+  border-right: 2px solid black; 
+}
 }
 
 .join-section {
@@ -225,23 +239,6 @@ body h3{
 .join-btn:active {
   background-color: var(--accent-yellow);
   color: white;
-}
-
-.newsletter-section {
-  background-color: #172953;
-}
-
-.newsletter-form {
-  max-width: 600px;
-  margin: 0 auto;
-}
-
-.email-input {
-  width: 60%;
-  min-width: 200px;
-  border: none;
-  padding: 10px;
-  border-radius: 4px;
 }
 
 .hero-contact-form {
@@ -296,32 +293,21 @@ body h3{
   color: #ffffff;
 }
 
-
-
 /* About us page */
 
 .about-page-intro-section{
-      background-color: #e3712e; 
+      background-color: var(--primary-green); 
       color: white;
     }
 
-.about-page-story-section{
-    background-color: #202f51;
-  color: white; 
-}
-
-.Our-Story{
-  height: 350px;
-  width: 350px;
-}
-
-.about-page-mission-section{
-    background-color: #172953;
-  color: white;
+.about-page-second-sections{
+  background-color: var(--light-green);
+  color: var(--text-dark);
+  border-bottom: 2px solid var(--accent-orange)
 }
 
 .about-page-goals-section{
-    background-color: #e3712e;
+    background-color: var(--primary-green);
   color: white; 
   
 }
@@ -331,12 +317,7 @@ body h3{
   min-width: 250px;
   text-align: center;
   height: 100px;
-  border: 3px solid #202f51;
-}
-
-.about-page-Difference-section{
-    background-color: #202f51;
-  color: white;
+  border: 3px solid var(--accent-orange);
 }
 
 .circular-img {
@@ -346,29 +327,30 @@ body h3{
   object-fit: cover;
 }
 
-.our-team-section{
-  background-color: #172953;
-  color: white; 
+.newsletter-section {
+  background-color: var(--primary-green);
+  color: var(--white);
+  padding: 20px;
 }
 
+.newsletter-form {
+  max-width: 600px;
+  margin: 0 auto;
+}
 
 
 
 /* Service page */
 
 .service-page-intro-section{
-      background-color: #e3712e; 
+      background-color: var(--primary-green); 
       color: white;
     }
 
-.services-page-overview-section {
-  background-color: #202f51; 
-  color: white;
-}
-
-.service-page-services-section{
-        background-color: #172953; 
-      color: white;
+.service-page-second-sections{
+  background-color: var(--light-green);
+  color: var(--text-dark);
+  border-bottom: 2px solid var(--accent-orange)
 }
 
 .service-page-services-section-img{
@@ -376,19 +358,16 @@ border-radius: 50%;
 border: 2px solid #e3712e; 
 height: 400px; 
 width: 400px;
+background-color: var(--primary-green);
 
 }
 
-
-.why-choose-us-section {
-  background-color: #202f51;
-  color: white;
-}
 
 .choose-card {
-  background-color: #172953;
+  background-color: var(--primary-green);
   border: 2px solid #e66921;
   transition: transform 0.3s ease;
+  color: white;
 }
 
 .choose-card:hover {
@@ -405,14 +384,21 @@ width: 400px;
     }
 
 .contact-form-page-section {
-  background-color: #172953;
-  color: white;
+  background-color: var(--light-green);
+  color: var(--text-dark);
 }
 
 .contact-form-page-section input,
-.contact-form-section textarea {
+.contact-form-page-section textarea {
   border-radius: 8px;
-  border: 1px solid #ccc;
+  border: 1px solid var(--accent-orange);
+  background-color: var(--primary-green);
+  color: white;
+}
+
+.form-control::placeholder {
+  color: white;
+  opacity: 1; /* Ensures it's not faded */
 }
 
 .contact-form-page-section .btn-primary {
@@ -426,17 +412,53 @@ width: 400px;
   background-color: #c8561a;
 }
 
-@media (max-width: 768px) {
+/* Change the navbar toggler icon color to black */
+.navbar-light .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='black' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22' /%3E%3C/svg%3E");
+}
+
+
+@media (max-width: 768px) and (min-width: 768px) {
+  .hero-section {
+    padding: 20px; /* Reduce padding */
+    height: auto;  /* Remove fixed height if not necessary */
+  }
+}
+
+
+@media (max-width: 766px) {
     .hero-section {
         text-align: center;
         padding: 0px;
         padding-top: 45px;
+        height: 600px;
       }
 
           .hero-section img {
             width: 100%;
-      height: 300px;
+      height: 250px;
     }
+
+     .main-heading {
+      font-size: 30px;
+      font-weight: bold;
+    }
+
+    .sub-heading{
+      font-size: 1.2rem;
+      font-weight: bold;
+    }
+    
+    .main-heading-2{
+      font-size: 30px;
+      font-weight: bold;
+    }
+
+  .lead {
+    font-size: 1rem; /* or whatever the normal size is */
+    font-weight: normal;
+    line-height: 1.5;
+  }
 
     .about-us-img{
       height: 300px;
@@ -446,4 +468,8 @@ width: 400px;
     .services-section .container{
       gap: 100px;
     }
+
+    .learn-section-line{
+  border-right:none;
+}
 }
