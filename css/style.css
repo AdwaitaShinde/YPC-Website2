@@ -44,8 +44,8 @@ body h3{
 
 /* Navbar */
 .navbar {
-  background: linear-gradient(to right, #0c1f16, #0a2c1d);
-  color: white;
+  background: #EAE4D3;
+  color: black;
   font-size: 18PX;
 }
 
@@ -54,7 +54,7 @@ body h3{
 }
 
 .custom-link .nav-link {
-  color: white !important;
+  color: var(--primary-green) !important;
   font-weight: 500;
   margin: 0 12px;
   text-decoration: none;
@@ -67,7 +67,7 @@ body h3{
 .nav-link:active,
 .nav-link.show,
 .nav-item.active .nav-link {
-  color: var(--white) !important;
+  color: var(--primary-green) !important;
 }
 
 .custom-link .nav-link::after {
@@ -77,33 +77,13 @@ body h3{
   left: 0;
   width: 0;
   height: 2px;
-  background-color: white;
+  background-color: var(--primary-green);
   transition: width 0.3s ease;
 }
 
 .custom-link .nav-link:hover::after {
   width: 100%;
 }
-
-/* contact button */
-.contact-btn {
-  background-color: var(--accent-yellow);
-  color: var(--text-dark);
-  font-weight: bold;
-  transition: all 0.3s ease; 
-  transform: scale(1);
-  border-radius: 8px;
-}
-
-.contact-btn:hover {
-  background-color: var(--accent-yellow); 
-  transform: scale(1.1); 
-}
-
-.contact-btn:active {
-  background-color: var(--accent-yellow);
-}
-
 
 /* Hero Section */
 
@@ -146,11 +126,11 @@ body h3{
 }
 
 .highlight {
-  color: #ffa500;
+  color: #cba357;
 }
 
 .explore-btn {
-  background-color: #ffa500;
+  background-color: #cba357;
   border: none;
   color: black;
   padding: 12px 30px;
@@ -160,8 +140,10 @@ body h3{
 }
 
 .explore-btn:hover {
-  background-color: #e28a00;
+  background-color: #cba357;
   color: white;
+    transform: scale(1.1); 
+
 }
 
 /* Fade Slide Animation */
@@ -593,6 +575,95 @@ body h3{
 
 
 
+.testimonials {
+  text-align: center;
+  padding: 60px 20px;
+  background: linear-gradient(to right, #0c1f16, #0a2c1d);
+  color: white;
+}
+
+.testimonials h2.sub-heading {
+  color: #ffa500;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.section-header .section-tag {
+  color: #00897b;
+  font-weight: 600;
+  margin-bottom: 5px;
+  letter-spacing: 1px;
+}
+
+.section-header h2 {
+  font-size: 2rem;
+  margin-bottom: 40px;
+}
+
+.testimonial-cards {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: #f8f8f8;
+  border-radius: 10px;
+  padding: 25px;
+  max-width: 300px;
+  text-align: left;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card img {
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  margin-bottom: 15px;
+}
+
+.card h3 {
+  margin: 0;
+  font-weight: bold;
+}
+
+.card .role {
+  color: #777;
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+}
+
+.card .review {
+  color: #444;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.card.card:hover {
+  background-color: #00897b;
+  color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .hero-contact-form {
 background: #EAE4D3;
@@ -793,6 +864,10 @@ background-color: var(--primary-green);
 .navbar-light .navbar-toggler-icon {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='black' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22' /%3E%3C/svg%3E");
 }
+
+
+
+
 
 
 @media (max-width: 768px) and (min-width: 768px) {
