@@ -39,7 +39,7 @@ body h3{
 
 /* Navbar */
 .navbar {
-  background: var(--creamy);
+  background: var(--off-white);
   color: var(--black);
   font-size: 18PX;
 }
@@ -79,25 +79,27 @@ body h3{
 /* Hero Section */
 .hero-section {
   display: flex;
+  flex-wrap: wrap; /* Stack elements on smaller screens */
   justify-content: space-between;
-   align-items: flex-start;
-  padding: 50px;
+  align-items: flex-start;
+  padding: 80px 30px;
   background: var(--primary-green);
   color: var(--white);
-  height: 100vh;
   gap: 40px;
-  flex-wrap: wrap;
+  min-height: 100vh;
+  box-sizing: border-box;
 }
 
-/* Left: Text Styling */
 .hero-text {
-  padding: 0px;
-  flex: 1;
-  min-width: 300px;
+  flex: 1 1 300px; /* Flexible grow/shrink with minimum width */
+  width: 100%;
+  /* max-width: 600px; */
+  /* text-align: center; Center text on smaller screens */
+  box-sizing: border-box;
 }
 
 .company-name {
-  font-size: 20px;
+  font-size: 1.2rem;
   font-weight: 600;
   letter-spacing: 1px;
   text-transform: uppercase;
@@ -128,12 +130,11 @@ body h3{
   font-size: 1rem;
   font-weight: bold;
   border-radius: 30px;
+  transition: transform 0.3s ease;
 }
 
 .explore-btn:hover {
-  background-color: var(--yellow);
-    transform: scale(1.1); 
-
+  transform: scale(1.1);
 }
 
 @keyframes fadeSlideUp {
@@ -152,21 +153,20 @@ body h3{
   animation: fadeSlideUp 1s ease-out forwards;
 }
 
-/* Right: Image Animation Styling */
+/* Right Side Image */
 .hero-images {
-  flex: 1;
-  position: relative;
-  min-width: 300px;
-  height: 100%;
+  flex: 1 1 300px; /* Flexible with min width */
+  width: 50%;
+  height: 80vh;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
-
-  /* Combine both animations */
   animation: zoomFade 1.5s ease-out forwards, floatY 6s ease-in-out 1.5s infinite;
+  border-radius: 1rem;
+  box-sizing: border-box;
 }
 
 @keyframes zoomFade {
@@ -185,9 +185,10 @@ body h3{
     transform: translateY(0);
   }
   50% {
-    transform: translateY(-10px); /* Move up a bit */
+    transform: translateY(-10px);
   }
 }
+ 
 
 /* about section */
 .about-section {
@@ -208,28 +209,12 @@ body h3{
   line-height: 1.8;
 }
 
-.image-box-wrapper {
-  position: relative;
-  width: 400px;
-  height: 400px;
-}
-
-.background-box {
-  position: absolute;
-  bottom: 20px;
-  right: 20px;
-  width: 100%;
-  height: 100%;
-  border: 3px solid skyblue; 
-  z-index: 0;
-}
-
 .about-us-img {
   position: relative;
   z-index: 1;
   border-radius: 30px;
-  height: 100%;
-  width: 100%;
+  height: 50%;
+  width: 80%;
   object-fit: cover;
   transition: transform 0.4s ease;
 }
@@ -279,28 +264,13 @@ body h3{
   padding: 80px 0;
 }
 
-.image-box-wrapper {
-  position: relative;
-  width: 400px;
-  height: 400px;
-}
-
-.background-box {
-  position: absolute;
-  bottom: 20px;
-  right: 20px;
-  width: 100%;
-  height: 100%;
-  border: 3px solid skyblue; 
-  z-index: 0;
-}
 
 .vision-section-img {
   position: relative;
   z-index: 1;
   border-radius: 30px;
-  height: 100%;
-  width: 100%;
+  height: 50%;
+  width: 80%;
   object-fit: cover;
   transition: transform 0.4s ease;
 }
@@ -662,8 +632,15 @@ body h3{
 }
 
 .contact-btn:hover {
-  background-color: #005f3c; /* darker green */
+  background-color: var(--yellow); 
+  color: var(--text-dark);
 }
+
+.contact-btn: :active {
+  background-color: var(--yellow); 
+  color: var(--text-dark);
+}
+
 
 
 /* Footer */
@@ -689,51 +666,4 @@ body h3{
 
 .footer-section i:hover {
   color: var(--white);
-}
-
-@media (max-width: 768px) and (min-width: 768px) {
-  .hero-section {
-    padding: 20px; 
-    height: auto;  
-  }
-}
-
-@media (max-width: 768px) {
-  .hero-section {
-    flex-direction: column;
-    text-align: center;
-  }
-  .hero-images {
-    height: 300px;
-  }
-  .main-heading {
-    font-size: 2.2rem;
-  }
-  .sub-heading {
-    font-size: 1.2rem;
-  }
-    
-  .main-heading-2{
-      font-size: 30px;
-      font-weight: bold;
-    }
-
-  .lead {
-    font-size: 1rem; 
-    font-weight: normal;
-    line-height: 1.5;
-  }
-
-  .about-us-img{
-      height: 300px;
-      width: 300px;
-    }
-
-  .services-section .container{
-      gap: 100px;
-    }
-
-  .learn-section-line{
-  border-right:none;
-}
 }
