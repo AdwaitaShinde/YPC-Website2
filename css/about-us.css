@@ -1,3 +1,41 @@
+:root {
+  --black: black;
+  --primary-green: #07362d;
+  --creamy: #f0e2ca;
+  --off-white:#f5f1eb;
+  --yellow: #fccc62;
+  --text-dark: #222222;
+  --white: #FFFFFF;
+  --font-primary: 'Poppins', sans-serif;
+  --font-secondary: 'Open Sans', sans-serif;
+} 
+
+html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+
+body {
+      display: flex;
+      flex-direction: column;
+      font-family: var(--font-primary);
+    }
+
+main {
+      flex: 1;
+    }
+
+body p{
+  font-family: var(--font-secondary);
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+body h3{
+  font-size: 22px;
+}
+
 /* About us page */
 
 .about-page-intro-section{
@@ -15,6 +53,10 @@
     background-color: var(--primary-green);
   color: white; 
   
+}
+
+.about-page-Difference-section{
+  background-color: var(--off-white);
 }
 
 .goal-item {
