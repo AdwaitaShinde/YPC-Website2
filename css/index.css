@@ -789,3 +789,42 @@ width: 400px;
   transform: scale(1.03);
   border-color: #ee6516;
 }
+
+/* contact page */
+.contact-page-intro-section{
+      background-color: var(--primary-green); 
+      color: white;
+    }
+
+.contact-form-page-section {
+  background-color: var(--light-green);
+  color: var(--text-dark);
+}
+
+.contact-form-page-section input,
+.contact-form-page-section textarea {
+  border-radius: 8px;
+  border: 1px solid var(--accent-orange);
+  background-color: var(--primary-green);
+  color: white;
+}
+
+.form-control::placeholder {
+  color: white;
+  opacity: 1; 
+}
+
+.contact-form-page-section .btn-primary {
+  background-color: #e66921;
+  border: none;
+  padding: 10px 25px;
+  font-weight: bold;
+}
+
+.contact-form-page-section .btn-primary:hover {
+  background-color: #c8561a;
+}
+
+.navbar-light .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='black' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22' /%3E%3C/svg%3E");
+}
