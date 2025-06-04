@@ -198,15 +198,22 @@
 </section>
 
 
-<div class="newsletter-section" style="background-color: var(--creamy); color: var(--text-dark);">
-    <h2 class="sub-heading text-center" style="color: var(--primary-green);"><b>Our Newsletter</b></h2>
-    <p class="text-center" style="">Subscribe to get updates and sustainability tips.</p>
-    <form class="d-flex newsletter-form">
-        <input type="email" class="form-control me-2 " placeholder="Email address" required>
-        <button class="btn btn-warning" type="submit">Subscribe</button>
+<section class="newsletter-section">
+  <div class="container text-center">
+    <div class="decorated-container-2 text-center">
+      <span class="double-lines-2 left" ></span>
+      <h2 class="sub-heading">Our Newsletter</h2>
+      <span class="double-lines-2 right " ></span>
+    </div>
+    <p class="newsletter-text">
+      Subscribe to get updates and sustainability tips.
+    </p>
+    <form class="newsletter-form" onsubmit="event.preventDefault();">
+      <input type="email" placeholder="Enter your email" required />
+      <button type="submit">Subscribe</button>
     </form>
-</div>
-
+  </div>
+</section>
   </main>
 
 <!-- Footer -->
