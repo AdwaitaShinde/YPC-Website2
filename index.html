@@ -1,443 +1,595 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <title>YUJIR PLANET COMPETENCIES</title>
-<!-- Font Awesome CDN -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" referrerpolicy="no-referrer" />
-  
-<!--Bootstrap -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="css/index.css">
-  <!--jQuery  -->
-  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+  <title>Yujir Climate Competencies</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: url(hero-img.png) no-repeat center center/cover;
+      min-height: 100vh;
+      color: #133b2c;
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    /* Overlay for better text readability */
+    body::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.4);
+      z-index: -1;
+    }
+
+    header {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      padding: 20px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      z-index: 999;
+      transition: all 0.3s ease;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      font-size: 24px;
+      font-weight: bold;
+      color: #4d7c0f;
+    }
+
+    .logo img {
+      height: 80px;
+      margin-right: 10px;
+    }
+
+    /* Navbar links */
+    nav a {
+      margin-left: 20px;
+      text-decoration: none;
+      color: white;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      position: relative;
+    }
+
+    /* Hover color for links */
+    nav a:hover {
+      color: #a0f0a0;
+    }
+
+    nav.nav-closed {
+  transform: translateY(-100%);
+}
+
+
+    /* Underline only for nav links (not button) */
+    nav a:not(.btn).active::after,
+    nav a:not(.btn):focus::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -5px;
+      width: 100%;
+      height: 2px;
+      background-color: white;
+      border-radius: 2px;
+    }
+
+    /* Button style (Let’s Talk Now) */
+nav .btn {
+  background-color: #facc15 !important;
+  color: black !important;
+  font-weight: 600;
+  padding: 10px 18px;
+  border-radius: 6px;
+  border: none;
+  transition: all 0.3s ease-in-out;
+}
+
+nav .btn:hover {
+  background-color: #ffe066 !important;
+  color: black !important;
+}
+
+
+
+.dropdown-menu .dropdown-item:hover {
+  background-color: #facc15 !important;  /* yellow */
+  color: black !important;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 100px 40px 120px; /* Top space for header, bottom for footer */
+  position: relative;
+}
+
+
+    .content-box {
+      background: white;
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      padding: 60px 50px;
+      max-width: 1000px;
+      width: 90%;
+      min-height: 400px;
+      box-shadow: 0 5px 30px rgba(0, 0, 0, 0.1);
+      position: relative;
+      margin-top: 80px;
+    }
+
+    .left-circle {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      background-color: #4d7c0f;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      left: -75px;
+      top: 30%;
+      transform: translateY(-50%);
+      z-index: 2;
+    }
+
+    .left-circle-2 {
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      background-color: #4d7c0f;
+      border: 2px solid white;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .left-circle span {
+      font-size: 30px;
+      color: white;
+    }
+
+    .text-section {
+      flex: 1;
+      padding-left: 80px;
+    }
+
+    .text-section h1 {
+      font-size: 50px;
+      font-weight: 900;
+      line-height: 1.3;
+      margin-bottom: 15px;
+    }
+
+    .text-section p {
+      font-size: 30px;
+      font-weight: 200;
+      color: #4d7c0f;
+      font-weight: bold;
+    }
+
+    .right-image-circle {
+      width: 230px;
+      height: 230px;
+      border-radius: 50%;
+      overflow: hidden;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+      position: absolute;
+      bottom: -100px;
+      right: 80px;
+      background-color: white;
+    }
+
+    .right-image-circle img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+
+    /* Footer */
+ .footer-section {
+            background-color: #133b2c;
+            color: white;
+            width: 100%;
+            padding-top: 10px;
+        }
+        
+        .footer-section a {
+            color: #facc15;
+            text-decoration: none;
+        }
+        
+        .footer-section a:hover {
+            text-decoration: underline;
+        }
+        
+        .footer-section i {
+            color: #facc15;
+            font-size: 18px;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-section i:hover {
+            color: white;
+        }
+        
+        .footer-logo {
+            height: 50px;
+            width: 100px;
+            object-fit: contain;
+        }
+        
+        .footer-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            padding-bottom: 0.25rem;
+        }
+        
+        .footer-list {
+            list-style: none;
+            padding-left: 0;
+            margin-bottom: 0;
+        }
+        
+        .footer-list li {
+            margin-bottom: 0.25rem;
+        }
+        
+        .social-icons {
+            display: flex;
+            gap: 10px;
+            margin-top: 0.5rem;
+        }
+        
+        .copyright {
+            font-size: 0.8rem;
+            opacity: 0.8;
+            padding-top: 0.5rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            margin-top: 0.5rem;
+        }
+        
+        /* Remove all unnecessary spacing */
+        .footer-section .container {
+            padding: 0.5rem 0;
+        }
+        
+        .footer-section .row {
+            --bs-gutter-x: 0.5rem;
+            --bs-gutter-y: 0.5rem;
+        }
+        
+        .footer-section .row > div {
+            padding: 0.25rem 0.5rem;
+        }
+        
+        /* Mobile optimization */
+        @media (max-width: 767.98px) {
+            .footer-section .row > div {
+                padding: 0.25rem 0.75rem;
+            }
+            
+            .footer-title {
+                margin-top: 0.75rem;
+            }
+            
+            .social-icons {
+                margin-bottom: 0.5rem;
+            }
+        }
+
+    /* Mobile navigation toggle */
+    .mobile-toggle {
+      display: none;
+      background: none;
+      border: none;
+      color: white;
+      font-size: 24px;
+      cursor: pointer;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 1200px) {
+      .text-section h1 {
+        font-size: 42px;
+      }
+      
+      .text-section p {
+        font-size: 26px;
+      }
+      
+      .right-image-circle {
+        width: 200px;
+        height: 200px;
+        right: 60px;
+        bottom: -80px;
+      }
+    }
+
+    @media (max-width: 992px) {
+      .text-section h1 {
+        font-size: 36px;
+      }
+      
+      .text-section p {
+        font-size: 22px;
+      }
+      
+      .content-box {
+        padding: 50px 40px;
+      }
+      
+      .left-circle {
+        width: 120px;
+        height: 120px;
+        left: -60px;
+      }
+      
+      .right-image-circle {
+        width: 180px;
+        height: 180px;
+        right: 40px;
+        bottom: -70px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      header {
+        padding: 15px 20px;
+        background: rgba(19, 59, 44, 0.95);
+      }
+      
+      .logo img {
+        height: 60px;
+      }
+      
+      nav {
+        position: fixed;
+        top: 90px;
+        left: 0;
+        width: 100%;
+        background: rgba(19, 59, 44, 0.98);
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0;
+        transform: translateY(-150%);
+        transition: transform 0.4s ease;
+      }
+      
+      nav.active {
+        transform: translateY(0);
+      }
+      
+      nav a {
+        margin: 12px 0;
+        font-size: 18px;
+      }
+      
+      .mobile-toggle {
+        display: block;
+      }
+      
+      .container {
+        padding: 20px;
+      }
+      
+      .content-box {
+        flex-direction: column;
+        padding: 40px 30px;
+        text-align: center;
+        margin-top: 120px;
+      }
+      
+      .left-circle {
+        position: relative;
+        left: 0;
+        top: 0;
+        transform: none;
+        margin: -80px auto 20px;
+      }
+      
+      .text-section {
+        padding-left: 0;
+      }
+      
+      .text-section h1 {
+        font-size: 32px;
+      }
+      
+      .text-section p {
+        font-size: 20px;
+      }
+      
+      .right-image-circle {
+        position: relative;
+        margin: 30px auto -80px;
+        right: auto;
+        bottom: auto;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .content-box {
+        width: 95%;
+        padding: 30px 20px;
+      }
+      
+      .text-section h1 {
+        font-size: 28px;
+      }
+      
+      .text-section p {
+        font-size: 18px;
+      }
+      
+      .left-circle {
+        width: 100px;
+        height: 100px;
+      }
+      
+      .left-circle-2 {
+        width: 50px;
+        height: 50px;
+      }
+      
+      .right-image-circle {
+        width: 160px;
+        height: 160px;
+      }
+    }
+  </style>
 </head>
 <body>
 
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg px-3">
-    <a href="index.html"><img src="images/logo.webp" alt="logo" style="height: 50px; width: 110px; "></a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+<header class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: rgba(19, 59, 44, 0.85); padding: 20px 40px;">
+  <div class="container-fluid"> <!-- Changed from container-fluid -->
+    <div class="logo d-flex align-items-center">
+      <img src="logo (2).png" alt="Logo" />
+    </div>
+
+    <!-- Bootstrap Navbar Toggler -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+
+    <!-- Navbar links -->
+    <div class="collapse navbar-collapse justify-content-end" id="mainNav">
       <ul class="navbar-nav">
-        <li class="nav-item custom-link"><a class="nav-link" href="index.html">Home</a></li>
-        <li class="nav-item custom-link"><a class="nav-link" href="about.html">Our Journey</a></li>
-        <li class="nav-item custom-link"><a class="nav-link" href="services.html">Services</a></li>
-         <li class="nav-item custom-link"><a class="nav-link" href="blog.html">Blog</a></li>
-        <li class="nav-item custom-link"><a class="nav-link" href="contact.html">Volunteer With Us</a></li>
-        
+        <li class="nav-item">
+          <a class="nav-link text-white mx-2" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white mx-2" href="about.html">Our Journey</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle text-white mx-2" href="#" id="servicesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Services
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="servicesDropdown" style="background-color: rgba(19, 59, 44, 0.95);">
+            <li><a class="dropdown-item text-white" href="service1.html">Climate Awareness & Training</a></li>
+            <li><a class="dropdown-item text-white" href="service2.html">Climate Consulting & Strategy</a></li>
+            <li><a class="dropdown-item text-white" href="service3.html">Social Impact & Leadership Development</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white mx-2" href="blog.html">Blog</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white mx-2" href="contact.html">Volunteer With Us</a>
+        </li>
+        <li class="nav-item">
+          <!-- Fixed Button Styling -->
+          <a class="btn btn-warning text-dark fw-bold px-3 py-2" href="contact.html" style="background-color: #facc15; border: none;">
+            Let's Talk Now
+          </a>
+        </li>
       </ul>
     </div>
-    <a class="btn btn-warning ms-auto explore-btn" href="contact.html">Let's Talk Now</a>
-  </nav>
-
-<main>
-<!-- Hero Section -->
-<section class="hero-section">
-  <!-- Left Side: Text -->
-  <div class="hero-text">
-    <h2 class="company-name highlight fade-slide-up" style="animation-delay: 0.2s;">YUJIR PLANET COMPETENCIES</h2>
-    <br>
-    <h1 class="main-heading fade-slide-up" style="animation-delay: 0.4s;">Transforming Skills into </h1>
-    <h1 class="main-heading highlight fade-slide-up" style="animation-delay: 0.6s;">Climate-Solving Competencies</h1>
-    <br>
-    <br>
-    <p class="fade-slide-up" style="animation-delay: 1s;">
-      Empowering individuals to identify and solve real-world climate challenges.
-    </p>
-    <h2 class="sub-heading fade-slide-up highlight" style="animation-delay: 0.8s; color: var(--yellow);" >Competencies | Community | Commitment</h2>
-    <br>
-    <a class="btn btn-warning explore-btn fade-slide-up" href="about.html" style="animation-delay: 1.2s;">
-      Learn More
-    </a>
   </div>
-
-  <!-- Right Side: Images -->
-<div class="hero-images image-sequence-wrapper" style="background-image: url('images/heroimg.webp');">
-</div>
-</section>
+</header>
 
 
-  <!-- About Section -->
-<section class="journey-section py-5 common-section-light">
+
+  <!-- Hero Content -->
   <div class="container">
-    <div class="row align-items-center">
-
-      <!-- Image Column -->
-      <div class="col-md-6 mb-4 mb-md-0">
-        <img src="images/about-us-page.webp" alt="Our Journey" class="img-fluid rounded shadow vision-section-img">
-      </div>
-
-      <!-- Text Column -->
-      <div class="col-md-6">
-        <div class="decorated-container">
-          <span class="double-lines left"></span>
-          <h2 class="sub-heading">Our Journey to Sustainability</h2>
-          <span class="double-lines right"></span>
+    <div class="content-box">
+      <div class="left-circle">
+        <div class="left-circle-2">
+            <span>&rarr;</span>
         </div>
-
-        <p>In 2023, our founder, Shwetha Munegowda, a Senior IT Manager, asked a powerful question:
-<b>“What impact does my work have on the Earth?”</b></p>
-
-        <p>That moment sparked a shift—from business as usual to purpose-driven, sustainable innovation. Inspired by the circular economy, the balance of people, planet, and profit, and the need for real action on climate change, Yujir was born.</p>
-
-        <p>We believe sustainability isn’t a buzzword—it’s a mindset and a skillset.</p>
-        <p><b>Why Yujir Exists</b></p>
-        <p>To address the climate crisis, we need more than awareness.
-We need climate competencies, green skills, and collective action.
-</p>
-
-        <p>Yujir is a space where:</p>
-        <div class="pillars">
-          <p><strong class="competence">Competence</strong> meets climate innovation.</p>
-          <p><strong class="community">Community</strong> builds momentum for change.</p>
-          <p><strong class="commitment">Commitment</strong> fuels lasting impact.</p>
-        </div>
-        
-        <p><strong>Together, We Create the Future.</strong> We believe that the future we want—resilient, inclusive, and full of hope—isn’t something we wait for. It’s something we build together.</p>
-        <a class="btn btn-warning explore-btn " href="about.html" style="animation-delay: 1.2s;">
-      Learn How Yujir Works
-    </a>
       </div>
-      
-
+      <div class="text-section">
+        <h1>COMPETENCIES,<br>COMMUNITY,<br>COMMITMENT</h1>
+        <p>Transforming Skills into <br>Climate-Solving Competencies</p>
+      </div>
+      <div class="right-image-circle">
+        <img src="earth-hand.png" alt="Hands holding Earth">
+      </div>
     </div>
   </div>
-</section>
 
-
-
-
-  <!-- vision-section Section -->
-<section class="py-5 vision-section common-section-light">
-  <div class="container">
-
-    <div class="row align-items-center">
-
-      <div class="col-md-6">
-                    <div class="decorated-container">
-                      <span class="double-lines left"></span>
-                      <h2 class="sub-heading">Our Vision</h2>
-                      <span class="double-lines right"></span>
+    <!-- Footer -->
+    <footer class="footer-section">
+        <div class="container text-white">
+            <div class="row g-1 align-items-start">
+                <div class="col-md-4 col-sm-12">
+                    <div class="d-flex flex-column">
+                        <a class="navbar-brand mb-1" href="index.html">
+                            <img src="logo (2).png" alt="logo" class="footer-logo">
+                        </a>
+                        <p class="mb-1">For a Greener Tomorrow 🌱</p>
+                        <p class="small mb-0">🌿 Powered by renewables ⚡ | Green-hosted 🌍 | Low-carbon design 💻</p>
                     </div>
+                </div>
 
-                <p class="lead mb-4">
-                  <p>To create a world where every individual is empowered with the competencies, supported by a community, and driven by commitment to take meaningful climate action—together.</p>
-      </div>
-      <div class="col-md-6 " >
-            <img src="images/vision.webp" alt="vision-section Image" class="img-fluid rounded vision-section-img" />
-      </div>
+                <div class="col-md-2 col-sm-6">
+                    <h6 class="footer-title">Quick Links</h6>
+                    <ul class="footer-list">
+                        <li><a href="index.html">🏠 Home</a></li>
+                        <li><a href="about.html">👥 Our Journey</a></li>
+                        <li><a href="services.html">⚙️ Services</a></li>
+                        <li><a href="learn.html">📖 Blog</a></li>
+                        <li><a href="contact.html">✉️ Volunteer With Us</a></li>
+                    </ul>
+                </div>
 
-    </div>
-  </div>
-</section>
+                <div class="col-md-3 col-sm-6">
+                    <h6 class="footer-title">Contact</h6>
+                    <p class="mb-1">Email: yujirplanetcompetencies@gmail.com</p>
+                    <p class="mb-1">Phone: +91 9071268700</p>
+                    <p class="mb-0">Address: Pune, Maharashtra</p>
+                </div>
 
+                <div class="col-md-2 col-sm-12">
+                    <h6 class="footer-title">Follow Us</h6>
+                    <div class="social-icons">
+                        <a href="#"><i class="bi bi-instagram"></i></a>
+                        <a href="https://www.linkedin.com/company/yujir-planet-competency/"><i class="bi bi-linkedin"></i></a>
+                        <a href="#"><i class="bi bi-youtube"></i></a>
+                        <a href="#"><i class="bi bi-facebook"></i></a>
+                    </div>
+                </div>
 
-
-
-<!-- Impact-section -->
-<section class="impact-section py-5 common-section-light">
-  <div class="decorated-container text-center">
-    <span class="double-lines left"></span>
-    <h2 class="sub-heading">Our Impact ( Mission )</h2>
-    <span class="double-lines right"></span>
-  </div>
-
-  <div class="impact-container mt-5">
-    <div class="row justify-content-center text-center">
-      <div class="col-lg-10 mb-4">
-        <div class="impact-card p-4 shadow-sm h-100 rounded text-center text-md-start d-flex flex-column flex-md-row align-items-center">
-          
-          <!-- Image -->
-          <div class="mb-3 mb-md-0 text-center me-md-4">
-            <img src="images/workshop.webp" alt="Mission Vision" class="img-fluid rounded mission-img" style="max-width: 280px;">
-          </div>
-
-          <!-- Text -->
-          <div class="mission-text">
-            <h3 class="mb-3 text-center text-md-start"><b>By 2030, Our Mission Is To Enable</b></h3>
-            <p class="mission-para">
-              Yujir aims to equip 500,000 students and professionals across India, working with over 1,000 educational institutions and MSMEs. We’re building climate-relevant competencies through real-world learning, systems thinking, and sustainability integration — all while fostering strong peer-learning communities and driving visible climate action at both local and institutional levels.
-            </p>
-          </div>
-
-        </div>
-      </div>
-
-      <!-- Quote -->
-      <div class="col-12">
-        <p class="mt-4 fst-italic quote-text text-center" style="color: #07362d;">
-          "Small actions, when multiplied by millions of people, can transform the planet."
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-
-
-<!-- Services Section -->
-<section class="services-section py-5">
-  <div class="container">
-    <div class="decorated-container-2 text-center">
-      <span class="double-lines-2 left" ></span>
-      <h2 class="sub-heading">Our Services</h2>
-      <span class="double-lines-2 right " ></span>
-    </div>
-    <h3> <b>Climate Competency Framework</b> </h3>
-    <h3><b>A 3-Level Certified Journey from Awareness to Climate Leadership</b></h3>
-    <p class="services-intro text-center">
-      Our framework offers progressive certification at every stage, empowering learners to build and demonstrate climate competencies step-by-step 
-    </p>
-
-    <br>
-    <div class="row">
-
-      <div class="col-md-4 mb-4">
-        <div class="service-card-lowcarbon text-white text-center">
-          <div class="card-image">
-            <img src="images/services-img1.webp" alt="Climate Awareness" class="services-img mb-3">
-          </div>
-          <div class="card-text">
-            <h3><b>Level 1: Awareness Certification (Foundation Certification)</b></h3>
-            <p>Learn through fun, interactive climate games and challenges.</p>
-            <p class="card-info">
-              <b>Outcome:</b> Certified as Yujir Climate Action- Foundation Certification — ready to identify climate issues and commit to simple, impactful actions.
-            </p>
-            <a class="service-btn" href="services.html"><span>Read More</span> &rarr;</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-4 mb-4">
-        <div class="service-card-lowcarbon text-white text-center">
-          <div class="card-image">
-            <img src="images/services-img2.webp" alt="Climate Awareness" class="services-img mb-3">
-          </div>
-          <div class="card-text">
-            <h3><b> Level 2: Action Certification (Builder Certification)</b></h3>
-            <p>Apply your knowledge through guided real-world projects and actions.</p>
-            <p class="card-info">
-              <b>Outcome: </b>Certified as Yujir Climate Action- Builder Certification — equipped with practical skills and verified climate-positive results.
-            </p>
-            <a class="service-btn" href="services.html"><span>Read More</span> &rarr;</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-4 mb-4">
-        <div class="service-card-lowcarbon text-white text-center">
-          <div class="card-image">
-            <img src="images/services-img3.webp" alt="Climate Awareness" class="services-img">
-          </div>
-          <div class="card-text">
-            <h3><b>Level 3: Leadership Certification (Champion Certification)</b></h3>
-            <p>Lead complex climate impact projects and mentor others.</p>
-            <p class="card-info">
-              <b>Outcome:</b> Certified as Yujir Climate Leadership- Champion Certification — recognized as a climate change agent driving systemic and community-wide solutions.
-            </p>
-            <a class="service-btn " href="services.html"><span>Read More</span> &rarr;</a>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-
-
-  <!-- Blog Section -->
-<section class="blog-section py-5 common-section-light">
-  <div class="container">
-    <div class="decorated-container" style="margin-bottom: 45px;">
-      <span class="double-lines left"></span>
-      <h2 class="sub-heading">Explore Our Recent Posts</h2>
-      <span class="double-lines right"></span>
-    </div>
-    <div class="row align-items-center mb-4">
-      <div class="col-md-6 text-md-end text-center blog-section-line mb-3 mb-md-0">
-        <img src="images/blog1.webp" alt="What is Climate Change?" class="img-fluid rounded blog-image">
-      </div>
-      <div class="col-md-6">
-        <h3><b>What is Climate Change & Why It Matters</b></h3>
-        <p>Explore the basics of climate change and how digital choices can influence a sustainable future.</p>
-            <a class="read-more-btn" href="blog.html">
-              <span>Read More</span>
-            </a>
-      </div>
-    </div>
-
-    <div class="row align-items-center mb-4 flex-md-row-reverse">
-      <div class="col-md-6 text-md-start text-center mb-3 mb-md-0">
-        <img src="images/blog2.webp" alt="Climate Impact" class="img-fluid rounded blog-image">
-      </div>
-      <div class="col-md-6 blog-section-line d-flex flex-column justify-content-center">
-        <div>
-          <h3><b>Real-World Impact of Climate Change</b></h3>
-          <p>How rising temperatures, extreme weather, and human health are all connected. Insights from experts.</p>
-            <a class="read-more-btn" href="blog.html">
-              <span>Read More</span>
-            </a>
-        </div>
-      </div>
-
-    </div>
-
-    <div class="row align-items-center mb-4">
-      <div class="col-md-6 text-md-end text-center blog-section-line mb-3 mb-md-0">
-        <img src="images/blog3.webp" alt="Green Tips" class="img-fluid rounded blog-image">
-      </div>
-      <div class="col-md-6">
-        <h3><b>Green Living Tips That Actually Work</b></h3>
-        <p>Easy-to-follow, impactful lifestyle changes that can reduce your carbon footprint. Start today.</p>
-            <a class="read-more-btn" href="blog.html">
-              <span>Read More</span>
-            </a>
-      </div>
-    </div>
-    <div class="text-center">
-      <a class="btn btn-warning explore-btn" href="blog.html" >
-      View all blog articles
-    </a>
-    </div>
-
-  </div>
-</section>
-
-<section class="newsletter-section">
-  <div class="container text-center">
-    <div class="decorated-container-2 text-center">
-      <span class="double-lines-2 left" ></span>
-      <h2 class="sub-heading">Sign up for the Newsletter</h2>
-      <span class="double-lines-2 right " ></span>
-    </div>
-    <p class="newsletter-text">
-      Get the latest climate insights, updates, and tips to take meaningful action—delivered straight to your inbox.
-    </p>
-    <form class="newsletter-form" onsubmit="event.preventDefault();">
-      <input type="email" placeholder="Enter your email" required />
-      <button type="submit" class="contact-btn">Subscribe</button>
-    </form>
-  </div>
-</section>
-
-
-<section class="testimonials common-section-light">
-    <div class="container text-center">
-    <div class="decorated-container text-center">
-      <span class="double-lines left"></span>
-      <h2 class="sub-heading">Testimonial</h2>
-      <span class="double-lines right"></span>
-    </div>
-    <p>Hear From Our Clients</p>
-  <div class="testimonial-cards">
-    <div class="card">
-      <img src="images/client.webp" alt="Olivia Smith"><p class="head">Corporate Partner</p>
-      <h3>Rahul Mehta</h3>
-      <p class="role">Director of CSR, GreenTech Solutions</p>
-      <p class="review">
-        Partnering with Yujir helped our team build real climate competencies. Their frameworks are actionable, and their participatory methods made learning engaging and impactful.
-      </p>
-    </div>
-    <div class="card highlighted">
-      <img src="images/client2.webp" alt="John Russel"><p class="head">Workshop Participant</p>
-      <h3>Aarav Joshi</h3>
-      <p class="role">Sustainability Officer</p>
-      <p class="review">
-        Yujir’s workshop completely changed how I think about climate action. It wasn't just informative—it empowered me with practical tools and a new mindset to implement sustainable practices in my organization.
-      </p>
-    </div>
-    <div class="card">
-      <img src="images/client2.webp" alt="Sophia Williams"><p class="head">Youth Learner</p>
-      <h3>Ritika Sharma</h3>
-      <p class="role">Climate Student</p>
-      <p class="review">
-        I have attended many climate education programs, but Yujir’s approach stands out. It’s rooted in real-world challenges and helps us think in systems—not silos.
-      </p>
-    </div>
-  </div>
-</section>
-
-
-
-<!-- Contact section with emojis (colors unchanged) -->
-<section class="hero-contact-form py-5 common-section-light">
-  <div class="container">
-    <div class="row justify-content-center">
-      <div class="col-lg-7">
-        <div class="contact-card p-5">
-          <h2 class="form-title text-center mb-3">📬 Contact Us</h2>
-          <p class="form-subtitle text-center mb-4" style="color: var(--white);">
-            Let’s get this conversation started. Tell us a bit about yourself, and we’ll get in touch soon! ✨
-          </p>
-            <div class="col-12 text-center">
-              <a class="btn btn-warning explore-btn " href="contact.html" style="animation-delay: 1.2s;">
-                🚀 Send Message
-              </a>
+                <div class="col-12">
+                    <div class="copyright text-center">
+                        <small>© 2025 Yujir Planet Competencies. All rights reserved.</small>
+                    </div>
+                </div>
             </div>
-        </div> 
-      </div>
-    </div>
-  </div>
-</section>
+        </div>
+    </footer>
 
 
-</main>
-
-<!-- Footer -->
-<footer class="footer-section py-4">
-  <div class="container text-white">
-    <div class="row">
-      <div class="col-md-4 mb-3">
-        <a class="navbar-brand" href="index.html"><img src="images/logo.webp" alt="logo" style="height: 50px; width: 100px;"></a>
-        <p>For a Greener Tomorrow 🌱</p>
-        <p>🌿 Powered by renewables ⚡ | Green-hosted 🌍 | Low-carbon design 💻 </p>
-      </div>
-
-      <div class="col-md-2 mb-3">
-        <h6>Quick Links</h6>
-        <ul class="list-unstyled">
-          <li><a href="index.html">🏠 Home</a></li>
-          <li><a href="about.html">👥 Our Journey</a></li>
-          <li><a href="services.html">⚙️ Services</a></li>
-          <li><a href="learn.html">📖 Blog</a></li>
-          <li><a href="contact.html">✉️ Volunteer With Us</a></li>
-        </ul>
-      </div>
-
-      <div class="col-md-3 mb-3">
-        <h6>Contact</h6>
-        <p>Email: yujirplanetcompetencies@gmail.com</p>
-        <p>Phone: +91 9071268700</p>
-        <p>Address: Pune, Maharashtra</p>
-      </div>
-
-            <div class="col-md-2 mb-3">
-        <h6>Follow Us</h6>
-          <a href="index.html" style="margin-right: 7px;"><i class="fa-brands fa-instagram"></i> </a>
-          <a href="about.html" style="margin-right: 7px;"><i class="fa-brands fa-linkedin"></i> </a>
-          <a href="services.html" style="margin-right: 7px;"><i class="fa-brands fa-youtube"></i> </a>
-          <a href="learn.html" style="margin-right: 7px;"><i class="fa-brands fa-facebook"></i> </a>
-      </div>
-
-    <div class="text-center mt-4">
-      <small>© 2025 Yujir Planet Competencies. All rights reserved.</small>
-    </div>
-  </div>
-</footer>
-
-
-
-
-  <!-- Bootstrap-->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
-  <script src="js/script.js"></script>
+  
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" defer></script>
 </body>
 </html>

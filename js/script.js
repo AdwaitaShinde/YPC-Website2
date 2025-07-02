@@ -17,6 +17,28 @@ $(document).ready(function() {
 });
 
 
+  const slides = document.querySelectorAll('.slide');
+  const dots = document.querySelectorAll('.dot');
+  let index = 0;
+  function showSlide(i){
+    slides.forEach((s, j) => {
+      s.classList.remove('active');
+      dots[j].classList.remove('active');
+    });
+    slides[i].classList.add('active');
+    dots[i].classList.add('active');
+  }
+  dots.forEach((dot, i) => {
+    dot.addEventListener('click', () => {
+      index = i;
+      showSlide(index);
+    });
+  });
+  setInterval(() => {
+    index = (index + 1) % slides.length;
+    showSlide(index);
+  }, 5000);
+
 // const images = document.querySelectorAll('.collection-img');
 
 //     function showImagesOneByOne() {
